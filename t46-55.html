@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const myObject = {
+        val: 10,
+
+        Traditional: function (number) {
+            return this.val * number;
+        },
+
+        Arrow: (number) => {
+            return this.val * number;
+        }
+    };
+
+    console.log(" Traditional:", myObject.Traditional(5));
+    console.log("Arrow:", myObject.Arrow(5));
+
+    let a = 10;
+    let b = 25;
+
+    function sum(a, b) {
+        return a + b;
+    }
+    console.log(sum(a, b))
+
+    
+    function print() {
+        console.log("Hi ,This is function without any parameter");
+    }
+    print();
+
+    
+    function fun(name = "Alice", greet = "Hi") {
+        console.log(greet + " " + name);
+    }
+    fun();
+    fun("Ram");
+
+    fun("Ram", "Hello");
+
+    let greet = (name) => {
+        return "Hi " + name
+    };
+    console.log(greet("dhanush"));
+    console.log(greet("naren"));
+    console.log(greet("ashwath"));
+
+    let even = (a1) => a1 % 2 == 0;
+
+    console.log(even(5));
+    console.log(even(56));
+    console.log(even(8));
+    console.log(even(7));
+    console.log(even(4));
+
+    let maxValue = (aa, ba) => {
+        if (aa >= ba)
+            return aa;
+        else
+            return ba;
+    }
+
+    console.log(maxValue(5, 8));
+    console.log(maxValue(8, 60));
+    console.log(maxValue(7, 15));
+    console.log(maxValue(5000, 86));
+
+</script>
+</html>
